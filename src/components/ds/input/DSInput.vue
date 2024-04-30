@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import type { InputProps } from './models'
-const {onChange, value} = defineProps<InputProps>()
+
+const { onChange, value } = defineProps<InputProps>()
 
 
-const onInputChange = (e: Event)=>{
+const onInputChange = (e: Event) => {
   const inputTarget = e.target as HTMLInputElement
   onChange(inputTarget.value)
 }
@@ -21,7 +22,7 @@ const onInputChange = (e: Event)=>{
   border-radius: 10px;
   border: 1px solid #000;
 
-  .inner-input{
+  .inner-input {
     width: 100%;
     padding: 10px;
   }
